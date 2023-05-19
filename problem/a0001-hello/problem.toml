@@ -1,0 +1,58 @@
+name = "Hello!"
+description = """
+**WOJ (WASM-OJ)** is a new online judge system written in *Rust*.
+It is designed to be a ***consistency***, ***secure*** and ***scalable*** system.
+
+Now, WOJ needs your help to test if the system is ready to run by executing a program that prints `Hello, {someone}!`.
+
+> This is the **first** problem in WOJ's official problem box!
+"""
+input = """
+The input is a string, which is the name of the person you want to say hello to.
+The length of the string is no more than 100 characters.
+"""
+output = """
+The output is a string, which is the sentence `Hello, {someone}!`.
+"""
+hint = """
+People usually have a first name and a last name.
+"""
+
+[[policy]]
+budget = 1000000
+memory = 16
+score = 70
+
+[[policy]]
+budget = 10000
+memory = 2
+score = 30
+
+[[testcase]]
+stdin = "World"
+stdout = "Hello, World!"
+score = 0
+sample = true
+description = "This is a sample testcase, the input is `World` and the output should be `Hello, World!`."
+
+[[testcase]]
+stdin = "WOJ"
+stdout = "Hello, WOJ!"
+score = 0
+sample = true
+description = "This is ***another*** sample testcase."
+
+[[testcase]]
+stdin = "WebAssembly"
+stdout = "Hello, WebAssembly!"
+score = 30
+
+[[testcase]]
+stdin = "Jacob Lin"
+stdout = "Hello, Jacob Lin!"
+score = 30
+
+[[testcase]]
+stdin_file = "input.txt"
+stdout_file = "output.txt"
+score = 40
