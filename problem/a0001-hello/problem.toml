@@ -18,6 +18,8 @@ hint = """
 People usually have a first name and a last name.
 """
 
+tags = ["io", "string"]
+
 [[policy]]
 budget = 1000000
 memory = 16
