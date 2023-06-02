@@ -1,0 +1,95 @@
+name = "What is a program?"
+description = """
+Let's start with the basics. What is a program?
+
+When we talk about a program, we're talking about a set of **instructions** that a computer can understand and execute.
+
+Generally speaking, every computer instruction is doing one of two things:
+
+1. **Moving** information, such as saving text to a file or saving numbers to memory
+2. **Manipulating** information, such as adding two numbers together or replacing words in a sentence
+
+All programs are made up of these two types of instructions. The instructions are written in a **programming language** that the computer can understand.
+
+Here's an example of a program written in C, a popular programming language:
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    scanf("%d %d", &a, &b);
+
+    int sum = a + b;
+
+    printf("The sum of %d and %d is %d\n", a, b, sum);
+
+    return 0;
+}
+```
+
+This program is doing the following:
+
+1. **Moving** information from standard input (the keyboard) into **variables** `a` and `b`.
+2. **Manipulating** information by adding `a` and `b` together and **moving** the result into a new variable `sum`.
+3. **Moving** information from the variables `a`, `b`, and `sum` to standard output (the screen).
+
+> *The actual happening behind the scene is a bit more complicated than this, but this is a good enough explanation for now.*
+
+Now, please implement a similar program, but read **three** numbers (`a`, `b`, and `c` respectively) from standard input and print the result of `a + b - c` to standard output.
+"""
+input = """
+The first line contains three positive integers not exceeding 1000, separated by spaces.
+"""
+output = """
+Print the result of `a + b - c` to standard output without other characters, and end with a newline (`\n`).
+"""
+
+tags = ["basic"]
+
+
+[[policy]]
+budget = 1000000
+memory = 64
+score = 100
+
+
+[[testcase]]
+stdin = "1 2 3"
+stdout = "0"
+score = 0
+sample = true
+description = "1 + 2 - 3 = 0"
+
+[[testcase]]
+stdin = "100 200 1"
+stdout = "299"
+score = 0
+sample = true
+description = "100 + 300 - 1 = 299"
+
+[[testcase]]
+stdin = "9 8 7"
+stdout = "10"
+score = 20
+
+[[testcase]]
+stdin = "123 321 222"
+stdout = "222"
+score = 20
+
+[[testcase]]
+stdin = "1000 1000 1000"
+stdout = "1000"
+score = 20
+
+[[testcase]]
+stdin = "1 1 1"
+stdout = "1"
+score = 20
+
+[[testcase]]
+stdin = "1 1 1000"
+stdout = "-998"
+score = 20
