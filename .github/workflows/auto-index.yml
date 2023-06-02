@@ -1,4 +1,4 @@
-name: Auto Index
+name: Auto Index and Spec Generation
 
 on:
     push:
@@ -16,7 +16,14 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Auto Index
-              uses: wasm-oj/auto-index@main
+              uses: wasm-oj/box@main
+              with:
+                  command: index
+
+            - name: Spec Generation
+              uses: wasm-oj/box@main
+              with:
+                  command: pack
 
             - name: Commit
               uses: EndBug/add-and-commit@v9
