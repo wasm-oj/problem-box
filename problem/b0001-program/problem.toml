@@ -43,7 +43,7 @@ input = """
 The first line contains three positive integers not exceeding 1000, separated by spaces.
 """
 output = """
-Print the result of `a + b - c` to standard output without other characters, and end with a newline (`\n`).
+Print the result of `a + b - c` to standard output without other characters, and end with a newline (`\\n`).
 """
 
 tags = ["basic"]
