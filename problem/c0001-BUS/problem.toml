@@ -1,0 +1,58 @@
+name = "BUS"
+description = """
+As a Busy University Student, you have to often take the bus to 本部 from 公館 campus.
+As introduce in the 伯樂大學堂, there are 3 bus routes between 公館 and 本部.
+The 3 routes are: 278, 復興幹線 and 0南. And they have different schedules.
+For simplicity, we assume that the bus schedules are as follows:
+1. 278: 40 minutes per bus(Least frequent in reality)
+2. 復興幹線: 6 minutes per bus(Most frequent in reality)
+3. 0 南: 19 minutes per bus
+And the bus service 24 hours a day.(i.e. 全年無休)
+
+Today, your friend, PY, who is a Bed and Usleep(INT_MAX) Student, he just wake up and just leave 學七舍, and you are at bus stop waiting for him.
+You want to tell him how many buses you have missed.
+"""
+input="""
+Input follow the format `D1:H1:M1`.`D1`,`H1`,`M1` are integers, where `D1` is the Day you arrive at the bus stop since 1922(the NTNU established), `H` is the hour you arrive at the bus stop, `M` is the minute you arrive at the bus stop.
+Then, the following input are `D2:H2:M2`.`D2`,`H2`,`M2` are integers, where `D2` is the Day PY arrive the bus stop since 1922(the NTNU established), `H2` is the hour PY arrive the bus stop, `M2` is the minute PY arrive the bus stop.
+It is guaranteed that PY will arrive after you. And all integers are in the range of int32_t.
+"""
+output="""
+Output a number, which is the number of buses you have missed between your arrival and PY's arrival.
+"""
+
+tags = ["basic"]
+
+
+[[policy]]
+budget = 10000
+memory = 64
+score = 100
+
+
+[[testcase]]
+stdin = "0:0:0 1:2:3"
+stdout = "381"
+score = 0
+sample = true
+
+[[testcase]]
+stdin = "0:1:0 0:1:40"
+stdout = "9"
+score = 0
+sample = true
+
+[[testcase]]
+stdin = "1000000:0:0 1000000:0:0"
+stdout = "0"
+score = 30
+
+[[testcase]]
+stdin = "0:0:0 1000000:0:0"
+stdout = "351789473"
+score = 30
+
+[[testcase]]
+stdin = "12345:10:23 1000000:0:0"
+stdout = "347446479"
+score = 40
