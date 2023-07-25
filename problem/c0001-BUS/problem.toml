@@ -54,5 +54,5 @@ score = 30
 
 [[testcase]]
 stdin = "12345:10:23 1000000:0:0"
-stdout = "347446479"
+stdout = "347446482"
 score = 40
