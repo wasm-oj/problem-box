@@ -14,13 +14,15 @@ And the bus service 24 hours a day.(i.e. 全年無休)
 
 Today, your friend, PY, who is a Bed and Usleep(INT_MAX) Student, he just wake up and just leave 學七舍, and you are at bus stop waiting for him.
 You want to tell him how many buses you have missed.
-"""
-input="""
+
+## Input
+
 Input follow the format `D1:H1:M1`.`D1`,`H1`,`M1` are integers, where `D1` is the Day you arrive at the bus stop since 1922(the NTNU established), `H` is the hour you arrive at the bus stop, `M` is the minute you arrive at the bus stop.
 Then, the following input are `D2:H2:M2`.`D2`,`H2`,`M2` are integers, where `D2` is the Day PY arrive the bus stop since 1922(the NTNU established), `H2` is the hour PY arrive the bus stop, `M2` is the minute PY arrive the bus stop.
 It is guaranteed that PY will arrive after you. And all integers are in the range of int32_t.
-"""
-output="""
+
+## Output
+
 Output a number, which is the number of buses you have missed between your arrival and PY's arrival.
 """
 
@@ -34,28 +36,38 @@ score = 100
 
 
 [[testcase]]
-stdin = "0:0:0 1:2:3"
-stdout = "381"
 score = 0
 sample = true
+[testcase.fs.prep]
+_stdin = "0:0:0 1:2:3"
+[testcase.fs.final]
+_stdout = "381"
 
 [[testcase]]
-stdin = "0:1:0 0:1:40"
-stdout = "9"
 score = 0
 sample = true
+[testcase.fs.prep]
+_stdin = "0:1:0 0:1:40"
+[testcase.fs.final]
+_stdout = "9"
 
 [[testcase]]
-stdin = "1000000:0:0 1000000:0:0"
-stdout = "0"
 score = 30
+[testcase.fs.prep]
+_stdin = "1000000:0:0 1000000:0:0"
+[testcase.fs.final]
+_stdout = "0"
 
 [[testcase]]
-stdin = "0:0:0 1000000:0:0"
-stdout = "351789473"
 score = 30
+[testcase.fs.prep]
+_stdin = "0:0:0 1000000:0:0"
+[testcase.fs.final]
+_stdout = "351789473"
 
 [[testcase]]
-stdin = "12345:10:23 1000000:0:0"
-stdout = "347446482"
 score = 40
+[testcase.fs.prep]
+_stdin = "12345:10:23 1000000:0:0"
+[testcase.fs.final]
+_stdout = "347446482"

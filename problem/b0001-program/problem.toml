@@ -38,12 +38,14 @@ This program is doing the following:
 > *The actual happening behind the scene is a bit more complicated than this, but this is a good enough explanation for now.*
 
 Now, please implement a similar program, but read **three** numbers (`a`, `b`, and `c` respectively) from standard input and print the result of `a + b - c` to standard output.
-"""
-input = """
+
+## Input
+
 The first line contains three positive integers not exceeding 1000, separated by spaces.
-"""
-output = """
-Print the result of `a + b - c` to standard output without other characters, and end with a newline (`\\n`).
+
+## Output
+
+Print the result of `a + b - c` to standard output without other characters, and end with a newline (`\n`).
 """
 
 tags = ["basic"]
@@ -56,40 +58,54 @@ score = 100
 
 
 [[testcase]]
-stdin = "1 2 3"
-stdout = "0"
 score = 0
 sample = true
 description = "1 + 2 - 3 = 0"
+[testcase.fs.prep]
+_stdin = "1 2 3"
+[testcase.fs.final]
+_stdout = "0"
 
 [[testcase]]
-stdin = "100 200 1"
-stdout = "299"
 score = 0
 sample = true
 description = "100 + 300 - 1 = 299"
+[testcase.fs.prep]
+_stdin = "100 200 1"
+[testcase.fs.final]
+_stdout = "299"
 
 [[testcase]]
-stdin = "9 8 7"
-stdout = "10"
 score = 20
+[testcase.fs.prep]
+_stdin = "9 8 7"
+[testcase.fs.final]
+_stdout = "10"
 
 [[testcase]]
-stdin = "123 321 222"
-stdout = "222"
 score = 20
+[testcase.fs.prep]
+_stdin = "123 321 222"
+[testcase.fs.final]
+_stdout = "222"
 
 [[testcase]]
-stdin = "1000 1000 1000"
-stdout = "1000"
 score = 20
+[testcase.fs.prep]
+_stdin = "1000 1000 1000"
+[testcase.fs.final]
+_stdout = "1000"
 
 [[testcase]]
-stdin = "1 1 1"
-stdout = "1"
 score = 20
+[testcase.fs.prep]
+_stdin = "1 1 1"
+[testcase.fs.final]
+_stdout = "1"
 
 [[testcase]]
-stdin = "1 1 1000"
-stdout = "-998"
 score = 20
+[testcase.fs.prep]
+_stdin = "1 1 1000"
+[testcase.fs.final]
+_stdout = "-998"

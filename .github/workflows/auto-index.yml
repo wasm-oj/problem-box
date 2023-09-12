@@ -15,11 +15,6 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
 
-            - name: Auto Index
-              uses: wasm-oj/box@main
-              with:
-                  command: index
-
             - name: Spec Generation
               uses: wasm-oj/box@main
               with:
